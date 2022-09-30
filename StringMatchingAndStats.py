@@ -17,6 +17,7 @@ for i in range(len(list)):
         for line1 in file:
             if line == line1 and line != '' and line != '\n':
                 dict_matched[list2[i]] = dict_matched[list2[i]]+1
+   
     # counting number of the LDA triples
     file2 = open("new_triples2topictopic1/"+list[i],"r")
     file = file2.read().splitlines()
@@ -37,10 +38,9 @@ for i in range(len(list)):
 
 file2.close()
 file4.close()
-
 fileToWrite = open("triplesInfo/"+"INFO_stories2.txt","w")
+
 for el in dict_matched:
-    
     fileToWrite.write(el+"\n ---- \n"+"matched: "+str(dict_matched[el])+"\nmissed: "+str(dict_missed[el])+"\nextra: "+str(dict_extra[el])+"\n \n")
     
 fileToWrite.close()
