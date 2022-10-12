@@ -6,7 +6,7 @@ from itertools import combinations
 dir = "C://Users//IJ//Desktop//research2//triples"
 nlp = spacy.load('en_core_web_md')
 
-# pre_process and similarity_filter are modified from https://towardsdatascience.com/how-to-filter-out-similar-texts-in-python-c7e7c5f7620e
+#the code was modified from https://towardsdatascience.com/how-to-filter-out-similar-texts-in-python-c7e7c5f7620e and my partner contributed to it
 def pre_process(triples):
     triple_docs = [nlp(x) for x in triples]
     preprocessed_triple_docs = []
