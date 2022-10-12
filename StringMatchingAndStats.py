@@ -40,14 +40,11 @@ file2.close()
 file4.close()
 fileToWrite = open("triplesInfo/"+"INFO_stories2.txt","w")
 
+#writing the results in the text file
 for el in dict_matched:
     fileToWrite.write(el+"\n ---- \n"+"matched: "+str(dict_matched[el])+"\nmissed: "+str(dict_missed[el])+"\nextra: "+str(dict_extra[el])+"\n \n")
     
 fileToWrite.close()
-print(dict_matched)
-print()
-print(dict_missed)
-print()
-print(dict_extra)
+
 
 
